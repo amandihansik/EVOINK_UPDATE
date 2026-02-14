@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | EvoInk - Our Design Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="index.html">
+                <div class="logo-symbol">EI</div>
+                <span>EvoInk</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <header class="portfolio-hero">
+        <div class="hero-overlay"></div>
+        <div class="portfolio-hero-content">
+            <h1>Our Design Evolution</h1>
+            <p class="hero-subtitle">Showcasing transformative projects that evolved brands through strategic design thinking</p>
+            <div class="portfolio-stats">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
+        <div class="filter-container">
+            <div class="filter-header">
+                <h2><i class="fas fa-filter"></i> Filter Projects</h2>
+                <p>Browse our work by category</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="branding">Brand Identity</button>
+                <button class="filter-btn" data-filter="web">Web & Digital</button>
+                <button class="filter-btn" data-filter="print">Print & Packaging</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="illustration">Illustration</button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="projectSearch" placeholder="Search projects...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <main class="portfolio-main">
+        <div class="portfolio-container">
+            <!-- Project 1: LOGO DESIGNS -->
+            <div class="portfolio-item" data-category="branding print" data-search="dulux weathershield paint brand identity packaging">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/dulux-paint.jpg" alt="logo designs">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>LOGO DESIGNS</h3>
+                            <p>Logo design and visual identity creation for modern brands</p>
+                            <div class="project-tags">
+                                <span class="tag">Brand Identity</span>
+                                <span class="tag">Logo</span>
+                                <span class="tag">Print Design</span>
+                            </div>
+                            <a href="logodesign.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>LOGO DESIGNS</h3>
+                    <p>Logo design and visual identity creation for modern brands</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 3 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Branding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: TechFlow Dashboard -->
+            <div class="portfolio-item" data-category="web" data-search="techflow dashboard ui ux saas interface design">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/techflow-dashboard.jpg" alt="TechFlow Dashboard UI Design">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>TechFlow Dashboard UI</h3>
+                            <p>User-centered SaaS interface design</p>
+                            <div class="project-tags">
+                                <span class="tag">UI/UX Design</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Dashboard</span>
+                            </div>
+                            <a href="project-techflow.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>TechFlow Dashboard UI</h3>
+                    <p>Modern dashboard interface for analytics SaaS platform</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 2 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Web Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: UrbanEco Campaign -->
+            <div class="portfolio-item" data-category="print social illustration" data-search="urbaneco environmental campaign print social media">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/urbaneco-campaign.jpg" alt="UrbanEco Environmental Awareness Campaign">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>UrbanEco Awareness Series</h3>
+                            <p>Environmental campaign across print and digital</p>
+                            <div class="project-tags">
+                                <span class="tag">Print Design</span>
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Illustration</span>
+                            </div>
+                            <a href="project-urbaneco.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>UrbanEco Awareness Series</h3>
+                    <p>Environmental awareness campaign for non-profit organization</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 4 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Campaign</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Café Brew Branding -->
+            <div class="portfolio-item" data-category="branding" data-search="cafe brew coffee shop logo branding identity">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/cafe-brew.jpg" alt="Café Brew Coffee Shop Brand Identity">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Café Brew Renaissance</h3>
+                            <p>Complete coffee shop brand identity redesign</p>
+                            <div class="project-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Brand Identity</span>
+                                <span class="tag">Packaging</span>
+                            </div>
+                            <a href="project-cafe-brew.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Café Brew Renaissance</h3>
+                    <p>Complete rebranding for specialty coffee shop chain</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 2 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Branding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Fashion E-commerce -->
+            <div class="portfolio-item" data-category="web" data-search="fashion ecommerce website ui ux design mobile">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/fashion-ecommerce.jpg" alt="Fashion E-commerce Website Design">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>VogueThread E-commerce</h3>
+                            <p>Fashion e-commerce platform design</p>
+                            <div class="project-tags">
+                                <span class="tag">E-commerce</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Mobile Design</span>
+                            </div>
+                            <a href="project-fashion.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>VogueThread E-commerce</h3>
+                    <p>Complete e-commerce website for fashion retailer</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 3 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Web Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Health App UI -->
+            <div class="portfolio-item" data-category="web illustration" data-search="health fitness app mobile ui design">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/health-app.jpg" alt="Health & Fitness Mobile App UI">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>FitLife Health App</h3>
+                            <p>Mobile fitness tracking application</p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile App</span>
+                                <span class="tag">UI Design</span>
+                                <span class="tag">Illustration</span>
+                            </div>
+                            <a href="project-fitlife.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>FitLife Health App</h3>
+                    <p>Health tracking mobile application UI/UX design</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 2.5 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Corporate Branding -->
+            <div class="portfolio-item" data-category="branding print" data-search="corporate branding stationery business cards">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/corporate-branding.jpg" alt="Corporate Brand Identity Package">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Nexus Corp Identity</h3>
+                            <p>Complete corporate branding package</p>
+                            <div class="project-tags">
+                                <span class="tag">Corporate</span>
+                                <span class="tag">Stationery</span>
+                                <span class="tag">Brand Guidelines</span>
+                            </div>
+                            <a href="project-nexus.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Nexus Corp Identity</h3>
+                    <p>Corporate identity system for tech company</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 3 Months</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Corporate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: Social Media Campaign -->
+            <div class="portfolio-item" data-category="social" data-search="social media campaign instagram facebook">
+                <div class="portfolio-image">
+                    <img src="images/portfolio/social-campaign.jpg" alt="Social Media Marketing Campaign">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Summer Vibes Campaign</h3>
+                            <p>Seasonal social media marketing</p>
+                            <div class="project-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Marketing</span>
+                                <span class="tag">Content Creation</span>
+                            </div>
+                            <a href="project-summer.html" class="view-project">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Summer Vibes Campaign</h3>
+                    <p>Seasonal social media campaign for retail brand</p>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 1 Month</span>
+                        <span class="meta-item"><i class="far fa-folder"></i> Social Media</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more">
+            <button id="loadMoreBtn" class="load-more-btn">
+                <i class="fas fa-plus"></i> Load More Projects
+            </button>
+        </div>
+    </main>
+
+    <!-- Portfolio CTA -->
+    <section class="portfolio-cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Like What You See?</h2>
+                <p>Let's discuss how we can bring your brand vision to life with strategic design.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-btn primary">
+                        <i class="fas fa-envelope"></i> Start a Project
+                    </a>
+                    <a href="services.html" class="cta-btn secondary">
+                        <i class="fas fa-list-alt"></i> View Services
+                    </a>
+                </div>
+            </div>
+            <div class="cta-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="portfolio-testimonials">
+        <div class="section-header">
+            <h2>Client Success Stories</h2>
+            <p>What our clients say about working with EvoInk</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"EvoInk transformed our brand identity. The attention to detail and strategic approach exceeded our expectations."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SC</div>
+                    <div class="author-info">
+                        <h4>Sarah Chen</h4>
+                        <span>CEO, TechFlow Solutions</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"The packaging redesign for our paint line increased sales by 35%. EvoInk truly understands brand evolution."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DJ</div>
+                    <div class="author-info">
+                        <h4>David Johnson</h4>
+                        <span>Marketing Director, Dulux</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Working with EvoInk was seamless. Their design process is strategic, efficient, and results-driven."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info">
+                        <h4>Maria Rodriguez</h4>
+                        <span>Founder, Café Brew</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">EvoInk</div>
+                <p class="motto">Evolve your brand with innovative design.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="process.html">Our Process</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            
+            <div class="footer-project-note">
+                <p><i class="fas fa-graduation-cap"></i> This website is part of an ICT Diploma project</p>
+                <p>© 2023 EvoInk Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        <!-- Sticky Portfolio Filter -->
+<section class="portfolio-filter-wrapper">
+    <div class="portfolio-filter-container" id="portfolioFilter">
+        <div class="filter-header">
+            <h2><i class="fas fa-filter"></i> Filter Projects</h2>
+            <p>Browse our work by category</p>
+            <button class="filter-toggle-btn" id="filterToggle" aria-label="Toggle filter menu">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        
+        <div class="filter-content" id="filterContent">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="branding">
+                    <i class="fas fa-palette"></i> Brand Identity
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-laptop"></i> Web & Digital
+                </button>
+                <button class="filter-btn" data-filter="print">
+                    <i class="fas fa-print"></i> Print & Packaging
+                </button>
+                <button class="filter-btn" data-filter="social">
+                    <i class="fas fa-hashtag"></i> Social Media
+                </button>
+                <button class="filter-btn" data-filter="illustration">
+                    <i class="fas fa-paint-brush"></i> Illustration
+                </button>
+            </div>
+            
+            <div class="filter-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="projectSearch" placeholder="Search projects by name, category, or keyword..." />
+                    <button class="clear-search" id="clearSearch" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-stats">
+                    <span id="projectCount">Showing 8 projects</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-mobile-toggle">
+            <button class="mobile-filter-btn" id="mobileFilterToggle">
+                <i class="fas fa-filter"></i>
+                <span>Filter</span>
+                <span class="filter-badge">0</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+        // Search Functionality
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            portfolioItems.forEach(item => {
+                const searchData = item.getAttribute('data-search').toLowerCase();
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('.portfolio-info p').textContent.toLowerCase();
+                
+                if (searchData.includes(searchTerm) || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+
+        // Load More Projects
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let visibleItems = 8;
+        const allItems = document.querySelectorAll('.portfolio-item');
+        
+        // Initially hide items beyond first 8
+        for (let i = visibleItems; i < allItems.length; i++) {
+            allItems[i].style.display = 'none';
+        }
+        
+        loadMoreBtn.addEventListener('click', function() {
+            const currentlyHidden = Array.from(allItems).filter(item => 
+                item.style.display === 'none' || item.style.display === ''
+            );
+            
+            // Show next 4 items
+            for (let i = 0; i < Math.min(4, currentlyHidden.length); i++) {
+                currentlyHidden[i].style.display = 'block';
+                setTimeout(() => {
+                    currentlyHidden[i].style.opacity = '1';
+                    currentlyHidden[i].style.transform = 'scale(1)';
+                }, 10 * i);
+            }
+            
+            // Hide button if all items are shown
+            visibleItems += 4;
+            if (visibleItems >= allItems.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+
+        // Hover effect for portfolio items
+        portfolioItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

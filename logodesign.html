@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Design Gallery | EvoInk</title>
+    <link rel="stylesheet" href="logodesign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pure Image Grid -->
+    <div class="logo-grid-container">
+        
+        <!-- Row 1 -->
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/SADAHAM ASAPUWA.jpg" alt="SANDAHAM ASAPUWA Concept">
+                    <div class="image-title">SANDAHAM ASAPUWA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/SEOUL COMPUTERS.jpg" alt="SEOUL COMPUTERS Concept">
+                    <div class="image-title">SEOUL COMPUTERS</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/SHABAB TYPING CENTER.jpg" alt="SHABAB TYPING CENTER Concept">
+                    <div class="image-title">SHABAB TYPING CENTER</div>
+                </div>
+            </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/SUNIL CONSTRUCTIONS.jpg" alt="SUNIL CONSTRUCTIONS Concept">
+                    <div class="image-title">SUNIL CONSTRUCTIONS</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/TEAM DRAGONS GAMING CLUB.jpg" alt="TEAM DRAGONS GAMING CLUB Concept">
+                    <div class="image-title">TEAM DRAGONS GAMING CLUB</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/WESTERN FIGHTERS CRICKET CLUB.jpg" alt="WESTERN FIGHTERS CRICKET CLUB Concept">
+                    <div class="image-title">WESTERN FIGHTERS CRICKET CLUB</div>
+                </div>
+            </div>
+        </div>
+         <!-- Row 3 -->
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/ZIOGRAPHY.jpg" alt="ZIOGRAPHY Concept">
+                    <div class="image-title">ZIOGRAPHY</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/ANUKA ELECTRICALS.jpg" alt="ANUKA ELECTRICALS Concept">
+                    <div class="image-title">ANUKA ELECTRICALS</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/BCC DEBATE COMMITTEE.jpg" alt="BCC DEBATE COMMITTEE Concept">
+                    <div class="image-title">BCC DEBATE COMMITTEE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/BCC MEDIA UNIT.jpg" alt="BCC MEDIA UNIT Concept">
+                    <div class="image-title">BCC MEDIA UNIT</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/EVOINK.jpg" alt="EVOINK Concept">
+                    <div class="image-title">EVOINK</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/JANIRU SENAN PHOTOGRAPHY.jpg" alt="JANIRU SENAN PHOTOGRAPHY Concept">
+                    <div class="image-title">JANIRU SENAN PHOTOGRAPHY</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/NALANDA BADGE 1.jpg" alt="NALANDA BADGE 1 Concept">
+                    <div class="image-title">NALANDA BADGE 1</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/NALANDA BADGE 2.jpg" alt="NALANDA BADGE 2 Concept">
+                    <div class="image-title">NALANDA BADGE 2</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-wrapper">
+                    <img src="LOGO PROJECT IMAGES/S3.jpg" alt="S3 Concept">
+                    <div class="image-title">S3</div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Lightbox Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.image-wrapper img');
+            const lightbox = document.querySelector('.lightbox-modal');
+            const lightboxImg = lightbox.querySelector('img');
+            const lightboxTitle = lightbox.querySelector('.lightbox-title');
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+            const prevBtn = lightbox.querySelector('.lightbox-prev');
+            const nextBtn = lightbox.querySelector('.lightbox-next');
+            
+            let currentIndex = 0;
+            const imageArray = Array.from(images);
+            
+            // Open lightbox on image click
+            images.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    currentIndex = index;
+                    openLightbox();
+                });
+            });
+            
+            function openLightbox() {
+                const imgSrc = imageArray[currentIndex].src;
+                const imgAlt = imageArray[currentIndex].alt;
+                const title = imageArray[currentIndex].parentElement.querySelector('.image-title').textContent;
+                
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = imgAlt;
+                lightboxTitle.textContent = title;
+                
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % imageArray.length;
+                openLightbox();
+            }
+            
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+                openLightbox();
+            }
+            
+            // Event listeners
+            closeBtn.addEventListener('click', closeLightbox);
+            nextBtn.addEventListener('click', showNextImage);
+            prevBtn.addEventListener('click', showPrevImage);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNextImage();
+                if (e.key === 'ArrowLeft') showPrevImage();
+            });
+            
+            // Close on background click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+            
+            // Swipe for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            lightbox.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            lightbox.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        showNextImage();
+                    } else {
+                        showPrevImage();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

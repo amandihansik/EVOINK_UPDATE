@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | EvoInk - Design Thoughts & Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="insights.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="index.html">
+                <div class="logo-symbol">EI</div>
+                <span>EvoInk</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="insights.html" class="active">Insights</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Insights Hero -->
+    <header class="insights-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Design <span class="highlight">Insights</span></h1>
+            <p class="hero-subtitle">Thoughts, inspiration, and practical advice on design, branding, and creative evolution</p>
+            
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="featured-label">
+                    <span class="featured-tag">Featured Article</span>
+                </div>
+                <div class="featured-content">
+                    <div class="featured-info">
+                        <h2>The 5 Stages of Brand Evolution: A Strategic Framework</h2>
+                        <p class="post-excerpt">Discover how brands can transform through strategic design thinking and why evolution is essential for long-term success...</p>
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> March 15, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 8 min read</span>
+                            <span class="meta-category">Branding</span>
+                        </div>
+                        <a href="insights/brand-evolution-stages.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="featured-image">
+                        <img src="images/insights/featured-brand-evolution.jpg" alt="Brand Evolution">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search & Filter Bar -->
+    <section class="insights-filter">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="branding">Branding</button>
+                    <button class="filter-btn" data-category="design-tips">Design Tips</button>
+                    <button class="filter-btn" data-category="case-studies">Case Studies</button>
+                    <button class="filter-btn" data-category="trends">Trends</button>
+                    <button class="filter-btn" data-category="process">Process</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Grid -->
+    <section class="insights-grid-section">
+        <div class="container">
+            <!-- Main Grid -->
+            <div class="insights-grid" id="insightsGrid">
+                
+                <!-- Article 1: Branding -->
+                <article class="insight-card" data-category="branding">
+                    <div class="card-image">
+                        <img src="images/insights/brand-psychology.jpg" alt="Color Psychology">
+                        <span class="card-category">Branding</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> March 10, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>The Psychology of Color in Branding</h3>
+                        <p class="excerpt">How different colors influence perception and how to choose the right palette for your brand identity.</p>
+                        <a href="insights/color-psychology.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2: Design Tips -->
+                <article class="insight-card" data-category="design-tips">
+                    <div class="card-image">
+                        <img src="images/insights/typography-tips.jpg" alt="Typography Tips">
+                        <span class="card-category">Design Tips</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> March 5, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Typography 101: Choosing Fonts That Work</h3>
+                        <p class="excerpt">A beginner's guide to understanding typefaces, pairing fonts, and creating effective typographic hierarchy.</p>
+                        <a href="insights/typography-guide.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3: Case Study -->
+                <article class="insight-card" data-category="case-studies">
+                    <div class="card-image">
+                        <img src="images/insights/dulux-case.jpg" alt="Dulux Case Study">
+                        <span class="card-category">Case Study</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> February 28, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <h3>Behind the Design: Dulux Weathershield Rebrand</h3>
+                        <p class="excerpt">An inside look at the complete rebranding process and how strategic design increased sales by 35%.</p>
+                        <a href="insights/dulux-case-study.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 4: Trends -->
+                <article class="insight-card" data-category="trends">
+                    <div class="card-image">
+                        <img src="images/insights/design-trends-2024.jpg" alt="Design Trends 2024">
+                        <span class="card-category">Trends</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> February 20, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>Top Design Trends to Watch in 2024</h3>
+                        <p class="excerpt">From neomorphism to nostalgic revivals, explore the trends shaping the design landscape this year.</p>
+                        <a href="insights/trends-2024.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 5: Process -->
+                <article class="insight-card" data-category="process">
+                    <div class="card-image">
+                        <img src="images/insights/creative-process.jpg" alt="Creative Process">
+                        <span class="card-category">Process</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> February 15, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>From Brief to Final: A Day in the Design Process</h3>
+                        <p class="excerpt">Follow a project from initial client meeting to final delivery, with insights into each stage of our workflow.</p>
+                        <a href="insights/design-process.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 6: Branding -->
+                <article class="insight-card" data-category="branding">
+                    <div class="card-image">
+                        <img src="images/insights/brand-storytelling.jpg" alt="Brand Storytelling">
+                        <span class="card-category">Branding</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> February 10, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>The Art of Brand Storytelling</h3>
+                        <p class="excerpt">How to craft compelling narratives that connect with your audience and differentiate your brand.</p>
+                        <a href="insights/brand-storytelling.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 7: Design Tips -->
+                <article class="insight-card" data-category="design-tips">
+                    <div class="card-image">
+                        <img src="images/insights/logo-design.jpg" alt="Logo Design Tips">
+                        <span class="card-category">Design Tips</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> February 5, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>10 Essential Tips for Effective Logo Design</h3>
+                        <p class="excerpt">Principles and best practices for creating memorable, timeless logos that represent your brand.</p>
+                        <a href="insights/logo-design-tips.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 8: Trends -->
+                <article class="insight-card" data-category="trends">
+                    <div class="card-image">
+                        <img src="images/insights/sustainable-design.jpg" alt="Sustainable Design">
+                        <span class="card-category">Trends</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> January 28, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Sustainable Design: Creating with Purpose</h3>
+                        <p class="excerpt">How eco-conscious design practices are shaping the future of branding and packaging.</p>
+                        <a href="insights/sustainable-design.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 9: Case Study -->
+                <article class="insight-card" data-category="case-studies">
+                    <div class="card-image">
+                        <img src="images/insights/cafe-brew-case.jpg" alt="Café Brew Case Study">
+                        <span class="card-category">Case Study</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="meta-date"><i class="far fa-calendar"></i> January 20, 2024</span>
+                            <span class="meta-read"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <h3>How Café Brew's Logo Redesign Boosted Engagement</h3>
+                        <p class="excerpt">A detailed look at the logo design process and how it transformed a local coffee shop into a community favorite.</p>
+                        <a href="insights/cafe-brew-case-study.html" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more">
+                <button id="loadMoreBtn" class="btn-outline">
+                    <i class="fas fa-plus"></i> Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="popular-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular <span class="highlight">Topics</span></h2>
+                <p>Explore articles by category</p>
+            </div>
+
+            <div class="topics-cloud">
+                <a href="#" class="topic-tag" data-category="branding">Branding</a>
+                <a href="#" class="topic-tag" data-category="design-tips">Design Tips</a>
+                <a href="#" class="topic-tag" data-category="case-studies">Case Studies</a>
+                <a href="#" class="topic-tag" data-category="trends">Trends</a>
+                <a href="#" class="topic-tag" data-category="process">Process</a>
+                <a href="#" class="topic-tag" data-category="logo-design">Logo Design</a>
+                <a href="#" class="topic-tag" data-category="typography">Typography</a>
+                <a href="#" class="topic-tag" data-category="color-theory">Color Theory</a>
+                <a href="#" class="topic-tag" data-category="ui-ux">UI/UX</a>
+                <a href="#" class="topic-tag" data-category="packaging">Packaging</a>
+                <a href="#" class="topic-tag" data-category="social-media">Social Media</a>
+                <a href="#" class="topic-tag" data-category="inspiration">Inspiration</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Never Miss an <span class="highlight">Insight</span></h2>
+                    <p>Subscribe to our newsletter and get the latest articles, design tips, and inspiration delivered straight to your inbox.</p>
+                </div>
+                <div class="newsletter-form">
+                    <form id="newsletterForm">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn-primary">
+                                Subscribe <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">EvoInk</div>
+                <p class="motto">Evolve your brand with innovative design.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="process.html">Process</a>
+                    <a href="about.html">About</a>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            
+            <div class="footer-project-note">
+                <p><i class="fas fa-graduation-cap"></i> This website is part of an ICT Diploma project by [Your Name]</p>
+                <p>© 2023 EvoInk Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Search and Filter Functionality
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const insightCards = document.querySelectorAll('.insight-card');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        
+        let visibleItems = 6; // Initially show 6 items
+        const totalItems = insightCards.length;
+
+        // Hide items beyond initial visible count
+        for (let i = visibleItems; i < totalItems; i++) {
+            insightCards[i].style.display = 'none';
+        }
+
+        // Filter function
+        function filterArticles() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+            let visibleCount = 0;
+
+            insightCards.forEach((card, index) => {
+                const category = card.dataset.category;
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('.excerpt').textContent.toLowerCase();
+                
+                // Check category filter
+                const categoryMatch = activeCategory === 'all' || category === activeCategory;
+                
+                // Check search
+                const searchMatch = searchTerm === '' || 
+                                   title.includes(searchTerm) || 
+                                   excerpt.includes(searchTerm);
+
+                if (categoryMatch && searchMatch) {
+                    // Show only if within visible range
+                    if (index < visibleItems) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                    visibleCount++;
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+
+            // Update load more button visibility
+            if (visibleCount <= visibleItems) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-flex';
+            }
+        }
+
+        // Search input event
+        searchInput.addEventListener('input', filterArticles);
+
+        // Filter button events
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                filterArticles();
+            });
+        });
+
+        // Load more button
+        loadMoreBtn.addEventListener('click', function() {
+            const hiddenItems = Array.from(insightCards).filter(card => 
+                card.style.display === 'none' && 
+                card.style.opacity !== '0'
+            );
+            
+            const nextItems = Math.min(3, hiddenItems.length);
+            
+            for (let i = 0; i < nextItems; i++) {
+                if (hiddenItems[i]) {
+                    hiddenItems[i].style.display = 'block';
+                    setTimeout(() => {
+                        hiddenItems[i].style.opacity = '1';
+                        hiddenItems[i].style.transform = 'scale(1)';
+                    }, 100 * i);
+                }
+            }
+            
+            visibleItems += nextItems;
+            
+            if (visibleItems >= totalItems || hiddenItems.length <= nextItems) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Newsletter form
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simple validation
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! You will receive our next newsletter.');
+                this.reset();
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Topic tags click
+        document.querySelectorAll('.topic-tag').forEach(tag => {
+            tag.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.dataset.category;
+                
+                // Find and click corresponding filter button
+                filterButtons.forEach(btn => {
+                    if (btn.dataset.category === category) {
+                        btn.click();
+                    }
+                });
+                
+                // Scroll to grid
+                document.querySelector('.insights-grid-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.insight-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

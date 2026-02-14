@@ -1,0 +1,379 @@
+/* ===== PURE LOGO DESIGN GRID ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fcff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+/* Grid Container */
+.logo-grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Grid Row */
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Grid Item */
+.grid-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #ffffff;
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.grid-item:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Image Title */
+.image-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, 
+        rgba(26, 95, 122, 0.9) 0%, 
+        rgba(26, 95, 122, 0.7) 70%,
+        transparent 100%);
+    color: white;
+    padding: 25px 20px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.grid-item:hover .image-title {
+    transform: translateY(0);
+}
+
+/* ===== LIGHTBOX MODAL ===== */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 40px;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-title {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Lightbox Buttons */
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .logo-grid-container {
+        max-width: 1000px;
+    }
+    
+    .grid-row {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .logo-grid-container {
+        gap: 25px;
+    }
+    
+    .image-title {
+        padding: 20px 15px 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .logo-grid-container {
+        gap: 20px;
+    }
+    
+    .grid-row {
+        gap: 15px;
+    }
+    
+    .grid-item {
+        border-radius: 12px;
+    }
+    
+    .lightbox-modal {
+        padding: 20px;
+    }
+    
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .lightbox-prev {
+        left: 15px;
+    }
+    
+    .lightbox-next {
+        right: 15px;
+    }
+    
+    .lightbox-title {
+        font-size: 1.1rem;
+        bottom: -40px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    .logo-grid-container {
+        gap: 15px;
+    }
+    
+    .image-title {
+        transform: translateY(0);
+        background: rgba(26, 95, 122, 0.85);
+        padding: 15px 10px 10px;
+        font-size: 0.95rem;
+    }
+    
+    .lightbox-content img {
+        max-height: 70vh;
+    }
+    
+    .lightbox-title {
+        font-size: 1rem;
+        bottom: -35px;
+        padding: 10px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.grid-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Stagger animation delays */
+.grid-row:nth-child(1) .grid-item:nth-child(1) { animation-delay: 0.1s; }
+.grid-row:nth-child(1) .grid-item:nth-child(2) { animation-delay: 0.2s; }
+.grid-row:nth-child(1) .grid-item:nth-child(3) { animation-delay: 0.3s; }
+
+.grid-row:nth-child(2) .grid-item:nth-child(1) { animation-delay: 0.4s; }
+.grid-row:nth-child(2) .grid-item:nth-child(2) { animation-delay: 0.5s; }
+.grid-row:nth-child(2) .grid-item:nth-child(3) { animation-delay: 0.6s; }
+
+.grid-row:nth-child(3) .grid-item:nth-child(1) { animation-delay: 0.7s; }
+.grid-row:nth-child(3) .grid-item:nth-child(2) { animation-delay: 0.8s; }
+.grid-row:nth-child(3) .grid-item:nth-child(3) { animation-delay: 0.9s; }
+
+.grid-row:nth-child(4) .grid-item:nth-child(1) { animation-delay: 1.0s; }
+.grid-row:nth-child(4) .grid-item:nth-child(2) { animation-delay: 1.1s; }
+.grid-row:nth-child(4) .grid-item:nth-child(3) { animation-delay: 1.2s; }
+
+/* ===== LOADING STATE ===== */
+.grid-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        transparent 100%);
+    animation: loading 1.5s infinite;
+    z-index: 1;
+    display: none;
+}
+
+.grid-item.loading::before {
+    display: block;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Hide loading animation when images are loaded */
+.grid-item.loaded::before {
+    display: none;
+}
